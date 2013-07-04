@@ -1,0 +1,13 @@
+{
+  "name": "mongoose-stamp",
+  "version": "0.0.1",
+  "description": "Mongoose plugin that adds createdAt, updatedAt, and deletedAt auto-assigned date properties",
+  "keywords": ["mongodb", "mongoose", "plugin", "timestamps", "createdAt", "updatedAt", "deletedAt"],
+  "author": "Tarun Chaudhry <tarunc92@gmail.com>",
+  "repository": { "type": "git", "url": "git://github.com/tarunc/mongoose-stamp.git" },
+  "dependencies": {
+    "mongoose": ">= 3.0"
+  },
+  "devDependencies": {},
+  "main": "index"
+}
