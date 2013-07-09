@@ -1,2 +1,3 @@
 
-module.exports = require('./lib/fs-traverse');
+module.exports = require('./lib/mongoose-stamps.js');
+
