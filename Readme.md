@@ -4,6 +4,40 @@
 Simple plugin for [Mongoose](https://github.com/LearnBoost/mongoose) which adds `createdAt`, `updatedAt`, and `deletedAt` date attributes
 that get auto-assigned to the most recent create/update timestamp. Currently, you need to manually manage `deletedAt`.
 
+## Installation
+
+`npm install --save mongoose-stamp`
+
+## Usage
+
+```javascript
+var stampIt = require('mongoose-stamp');
+var userSchema = new Schema({
+    username: String
+});
+UserSchema.plugin(stampIt);
+mongoose.model('User', userSchema);
+var User = mongoose.model('User', userSchema)
+```
+The User model will now have `createdAt` and `updatedAt` properties, which get
+automatically generated and updated when you save your document. mongoose-stamp will also add support for
+
+```javascript
+var user = new User({username: 'Prince'});
+user.save(function (err) {
+  console.log(user.createdAt); // Should be approximately now
+  console.log(user.createdAt === user.updatedAt); // true
+  // Wait 1 second and then update the user
+  setTimeout( function () {
+    user.username = 'Symbol';
+    user.save( function (err) {
+      console.log(user.updatedAt); // Should be approximately createdAt + 1 second
+      console.log(user.createdAt < user.updatedAt); // true
+    });
+  }, 1000);
+});
+```
+
 ## License
 
 (The MIT License)
