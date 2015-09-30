@@ -20,7 +20,7 @@ mongoose.model('User', userSchema);
 var User = mongoose.model('User', userSchema)
 ```
 The User model will now have `createdAt` and `updatedAt` properties, which get
-automatically generated and updated when you save your document. mongoose-stamp will also add support for developers setting the `deletedAt` property on a model instead of removing it. However, due to limitations of the mongoose plugin architechture, we are unable to automaticlly add support for the `deletedAt` property. mongoose-stamp requires developers to maintain the `deletedAt` property themselves if they use it.
+automatically generated and updated when you save your document. mongoose-stamp will also add support for developers setting the `deletedAt` property on a model instead of removing it. However, due to limitations of the mongoose plugin architecture, we are unable to automaticlly add support for the `deletedAt` property. mongoose-stamp requires developers to maintain the `deletedAt` property themselves if they use it.
 
 ```javascript
 var user = new User({username: 'Prince'});
