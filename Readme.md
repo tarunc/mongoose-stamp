@@ -42,7 +42,7 @@ user.save(function (err) {
 
 (The MIT License)
 
-Copyright (c) 2013 Tarun Chaudhry &lt;tarunc92@gmail.com&gt;
+Copyright (c) 2013-2016 Tarun Chaudhry &lt;opensource@chaudhry.co&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

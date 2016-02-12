@@ -15,11 +15,11 @@ mongoose.connection.on('error', function (err) {
   console.error('Make sure a mongoDB server is running and accessible by this application');
 });
 
-var timeCopSchema = new Schema({
+var TimeCopSchema = new Schema({
   email: String
 });
 
-timeCopSchema.plugin(stampIt);
+TimeCopSchema.plugin(stampIt);
 
 var TimeCop = mongoose.model('TimeCop', TimeCopSchema);
 
